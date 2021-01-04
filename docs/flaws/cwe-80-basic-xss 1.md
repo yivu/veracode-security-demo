@@ -31,7 +31,7 @@ Validate input using a whitelist.
 
 Remediate
 ---------
-Encode data using [OWASP Java Encoder Project](https://www.owasp.org/index.php/OWASP_Java_Encoder_Project).
+Encode rendered data using appropriate ASP.NET encoding methods.
 
 Resources
 ---------
