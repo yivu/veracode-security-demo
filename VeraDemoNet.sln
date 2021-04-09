@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2016
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeraDemoNet", "VeraDemoNet\VeraDemoNet.csproj", "{130A5D09-D079-449D-88F3-FBA5617A3F24}"
 EndProject
@@ -12,21 +12,20 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "flaws", "flaws", "{0F2037C7-D998-4032-A4F6-0678C0A806EF}"
 	ProjectSection(SolutionItems) = preProject
-		docs\flaws\cwe-100-technology-specific-input-validation-problems.md = docs\flaws\cwe-100-technology-specific-input-validation-problems.md
-		docs\flaws\cwe-117-improper-output-neutralization-for-logs.md = docs\flaws\cwe-117-improper-output-neutralization-for-logs.md
-		docs\flaws\cwe-200-information-exposure.md = docs\flaws\cwe-200-information-exposure.md
-		docs\flaws\cwe-259-hardcoded-password.md = docs\flaws\cwe-259-hardcoded-password.md
-		docs\flaws\cwe-327-broken-crypto.md = docs\flaws\cwe-327-broken-crypto.md
-		docs\flaws\cwe-384-session-fixation.md = docs\flaws\cwe-384-session-fixation.md
-		docs\flaws\cwe-470-unsafe-reflection.md = docs\flaws\cwe-470-unsafe-reflection.md
-		docs\flaws\cwe-502-deserialization-of-untrusted-data.md = docs\flaws\cwe-502-deserialization-of-untrusted-data.md
-		docs\flaws\cwe-601-open-redirect.md = docs\flaws\cwe-601-open-redirect.md
-		docs\flaws\cwe-73-directory-traversal.md = docs\flaws\cwe-73-directory-traversal.md
-		docs\flaws\cwe-77-command-injection.md = docs\flaws\cwe-77-command-injection.md
-		docs\flaws\cwe-80-basic-xss 1.md = docs\flaws\cwe-80-basic-xss 1.md
-		docs\flaws\cwe-89-sql-injection (2nd Order).md = docs\flaws\cwe-89-sql-injection (2nd Order).md
-		docs\flaws\cwe-89-sql-injection.md = docs\flaws\cwe-89-sql-injection.md
-		docs\flaws\cwe-915-improperly-Controlled-modification-of-dynamically-determined-object-attributes.md = docs\flaws\cwe-915-improperly-Controlled-modification-of-dynamically-determined-object-attributes.md
+		docs\flaws\1-cwe-470-unsafe-reflection.md = docs\flaws\1-cwe-470-unsafe-reflection.md
+		docs\flaws\10-cwe-502-deserialization-of-untrusted-data.md = docs\flaws\10-cwe-502-deserialization-of-untrusted-data.md
+		docs\flaws\11-cwe-327-broken-crypto.md = docs\flaws\11-cwe-327-broken-crypto.md
+		docs\flaws\12-cwe-384-session-fixation.md = docs\flaws\12-cwe-384-session-fixation.md
+		docs\flaws\13-cwe-73-directory-traversal.md = docs\flaws\13-cwe-73-directory-traversal.md
+		docs\flaws\14-cwe-117-improper-output-neutralization-for-logs.md = docs\flaws\14-cwe-117-improper-output-neutralization-for-logs.md
+		docs\flaws\2-cwe-601-open-redirect.md = docs\flaws\2-cwe-601-open-redirect.md
+		docs\flaws\3-cwe-77-command-injection.md = docs\flaws\3-cwe-77-command-injection.md
+		docs\flaws\4-cwe-80-basic-xss 1.md = docs\flaws\4-cwe-80-basic-xss 1.md
+		docs\flaws\5-cwe-89-sql-injection.md = docs\flaws\5-cwe-89-sql-injection.md
+		docs\flaws\6-cwe-89-sql-injection (2nd Order).md = docs\flaws\6-cwe-89-sql-injection (2nd Order).md
+		docs\flaws\7-cwe-915-improperly-controlled-modification-of-dynamically-determined-object-attributes.md = docs\flaws\7-cwe-915-improperly-controlled-modification-of-dynamically-determined-object-attributes.md
+		docs\flaws\8-cwe-259-hardcoded-password.md = docs\flaws\8-cwe-259-hardcoded-password.md
+		docs\flaws\9-cwe-200-information-exposure.md = docs\flaws\9-cwe-200-information-exposure.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "artifacts", "artifacts", "{50687040-E907-4D7A-BF96-2B0BBE7D7F01}"
