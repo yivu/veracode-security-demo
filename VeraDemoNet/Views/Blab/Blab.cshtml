@@ -55,9 +55,7 @@
                                     </div>
                                     <div class="blockquote">
                                         <p class="">
-                                            @*START BAD CODE*@
-                                            "@Html.Raw(comment.Content)"
-                                            @*END BAD CODE*@
+                                            "@Html.Raw(HttpUtility.HtmlEncode(comment.Content))"
                                         </p>
                                         <span class="date sub-text">by @(comment.Author.BlabName) on @comment.TimestampString</span><br>
                                     </div>
