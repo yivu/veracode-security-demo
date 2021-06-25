@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Web.Mvc;
@@ -286,6 +287,7 @@ namespace VeraDemoNet.Controllers
             return viewModel;
         }
 
+        private Type[] _whitelistedCommands = { typeof(ListenCommand), typeof(IgnoreCommand) };
         [HttpPost, ActionName("Blabbers")]
         public ActionResult PostBlabbers(string blabberUsername, string command)
         {
@@ -303,11 +305,14 @@ namespace VeraDemoNet.Controllers
                     dbContext.Database.Connection.Open();
 
                     var commandType = Type.GetType("VeraDemoNet.Commands." + UpperCaseFirst(command) + "Command");
+                    if (!_whitelistedCommands.Contains(commandType))
+                    {
+                        throw new ArgumentException($"command not found: \"{command}\"");
+                    }
 
-                    /* START BAD CODE */
                     var cmdObj = (IBlabberCommand) Activator.CreateInstance(commandType, dbContext.Database.Connection, username);
                     cmdObj.Execute(blabberUsername);
-                    /* END BAD CODE */
+                    
                 }
             }
             catch (Exception ex)
