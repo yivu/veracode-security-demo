@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Web.Hosting;
@@ -77,6 +78,8 @@ namespace VeraDemoNet.Controllers
             return output == null ? "" : output.ToString();
         }
 
+
+        private static string[] _whitelistedFiles = { "funny.txt", "offensive.txt" };
         private string Fortune(string fortuneFile)
         {
             var output = new StringBuilder();
@@ -88,11 +91,13 @@ namespace VeraDemoNet.Controllers
 
             try
             {
-                // START BAD CODE
+                if (!_whitelistedFiles.Any(x => x.Equals(fortuneFile, StringComparison.OrdinalIgnoreCase)))
+                {
+                    throw new ArgumentException($"Fortune file \"{fortuneFile}\" is not supported");
+                }
                 var fileName = "cmd.exe";
                 var arguments = "/c " + HostingEnvironment.MapPath("~/Resources/bin/fortune-go.exe") + " " + HostingEnvironment.MapPath("~/Resources/bin/" + fortuneFile);
-                // END BAD CODE
-
+                
                 var proc = CreateStdOutProcess(fileName, arguments);
 
                 proc.ErrorDataReceived += delegate(object sender, DataReceivedEventArgs e) { output.Append(e.Data); };
